@@ -13,7 +13,9 @@ function App() {
  <Router>
       <NavBar/>
       <Routes>
+
          <Route path='/Home' element={<Home/>}/>
+
       </Routes>
   </Router>
 
