@@ -5,7 +5,7 @@ function Iteams(props) {
     
     <div className="my-3">
       <div className="card" style={{width: "18rem"}}>
-        <img src={props.url} className="card-img-top" alt="..." />
+        <img src={props.url} className="card-img-top" alt="https://www.sanasafinaz.com/media/wysiwyg/couture/B-391.jpg" />
         <div className="card-body">
           <h5 className="card-title">{props.title}...</h5>
           <p className="card-text">

@@ -223,7 +223,7 @@ function Home() {
 
         {articles.map((article) => (
           <div className="col-md-4" key={article.url}>
-            <Iteams title={article.title} description={article.description} url={article.urlToImage} newsUrl={articles.url} />
+            <Iteams title={article.title} description={article.description} url={article.urlToImage} newsUrl={article.url} />
 
           </div>
 
