@@ -1,7 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Iteams from "./Iteams";
 import { useState } from "react";
-
 
 
 function Home() {
@@ -210,6 +209,27 @@ function Home() {
       }
     ]
   );
+
+
+  useEffect(() => {
+
+    const getdata= async()=>{
+
+      let url= "https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=c8bb5dfa968248a29af6263abb8e28ec";
+
+      let data= await fetch(url);
+      let parseddata= await data.json();
+      setarticles(parseddata.articles);
+
+    }
+   getdata();
+  },)
+  
+
+  
+
+
+
   
   return (
     <div className="container my-3">
@@ -218,7 +238,7 @@ function Home() {
       <div className="row">
 
         <div className="col-md-4">
-          <Iteams title="clothes" description="place description here" url="https://www.sanasafinaz.com/media/wysiwyg/couture/B-391.jpg" />
+          <Iteams title="Fashion" description="place description here" url="https://www.sanasafinaz.com/media/wysiwyg/couture/B-391.jpg" />
         </div>
 
         {articles.map((article) => (
