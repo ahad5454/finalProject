@@ -210,7 +210,7 @@ function Home() {
       }
     ]
   );
-
+  
   return (
     <div className="container my-3">
       <h2>Top headlines</h2>
@@ -223,7 +223,7 @@ function Home() {
 
         {articles.map((article) => (
           <div className="col-md-4" key={article.url}>
-            <Iteams title={article.title} description={article.description} url={article.urlToImage} />
+            <Iteams title={article.title} description={article.description} url={article.urlToImage} newsUrl={articles.url} />
 
           </div>
 
